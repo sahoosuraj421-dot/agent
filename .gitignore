@@ -1,0 +1,23 @@
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Downloads & Reports (sensitive configuration dumps)
+downloads/
+reports/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
