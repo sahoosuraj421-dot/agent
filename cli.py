@@ -164,7 +164,8 @@ def main():
             print("[-] Error: Password is required for active host login.", file=sys.stderr)
             sys.exit(1)
         print(f"\n[+] Active firewall device detected at {selected_host}.")
-        password = prompt_password("[?] Enter firewall password (encrypted / masked input): ").strip()
+        print("[*] Password input is hidden. Type your password and press Enter; no characters will appear.")
+        password = prompt_password("[?] Enter firewall password: ").strip()
 
     if not password:
         print("[-] Password cannot be empty. Login cancelled.")

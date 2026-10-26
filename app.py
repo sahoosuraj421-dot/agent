@@ -633,7 +633,7 @@ with main_tab:
                     # Filter
                     search_pol = st.text_input("Filter policies by name or keyword:", "", key="policy_filter")
                     if search_pol:
-                        df_pol = df_pol[df_pol.astype(str).apply(lambda row: row.str.contains(search_pol, case=False).any(), axis=1)]
+                        df_pol = df_pol[df_pol.astype(str).apply(lambda row: row.str.contains(search_pol, case=False, regex=False).any(), axis=1)]
                     st.dataframe(df_pol, use_container_width=True)
                 else:
                     st.json(policies_list)
